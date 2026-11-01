@@ -361,29 +361,71 @@ elif page == "Fraud Dashboard":
                         )
                     )
 
-                    st.subheader("Estimated Business Cost")
+                    
+                    st.subheader("Business Cost Analysis")
 
-                    missed_cost = st.number_input(
-                        "Cost of missed fraud",
-                        min_value=0.0,
-                        value=1000.0
+                    st.write(
+                     "Costs are calculated using the same assumptions "
+                    "as the machine learning notebook."
+                     )
+
+                    # Retrieve cost assumptions from the saved model
+                    cost_assumptions = artifact["cost_assumptions"]
+
+                    fn_loss_fraction = cost_assumptions["fn_loss_fraction"]
+                    fp_cost = cost_assumptions["fp_cost"]
+
+                    # Identify missed fraud and false alarms
+                    actual = y.astype(int).to_numpy()
+
+                    missed_fraud_mask = (
+                        (actual == 1) & (predictions == 0)
                     )
 
-                    false_alarm_cost = st.number_input(
-                        "Cost of false alarm",
-                        min_value=0.0,
-                        value=50.0
+                    false_alarm_mask = (
+                        (actual == 0) & (predictions == 1)
+                    )
+
+                    # Calculate the total amount of missed fraud
+                    missed_fraud_amount = data.loc[
+                        missed_fraud_mask, "amount"
+                    ].sum()
+
+                    # Calculate the two cost components
+                    missed_fraud_cost = (
+                        fn_loss_fraction * missed_fraud_amount
+                    )
+
+                    false_alarm_total_cost = (
+                        fp_cost * int(false_alarm_mask.sum())
                     )
 
                     total_cost = (
-                        fn * missed_cost + fp * false_alarm_cost
+                        missed_fraud_cost + false_alarm_total_cost
                     )
 
-                    st.metric("Estimated Total Cost", f"{total_cost:,.2f}")
+                    # Display results
+                    c1, c2, c3 = st.columns(3)
+
+                    c1.metric(
+                        "Missed Fraud Cost",
+                        f"{missed_fraud_cost:,.2f}"
+                    )
+
+                    c2.metric(
+                        "False Alarm Cost",
+                        f"{false_alarm_total_cost:,.2f}"
+                    )
+
+                    c3.metric(
+                        "Estimated Total Cost",
+                        f"{total_cost:,.2f}"
+                    )
 
                     st.caption(
-                        "These costs are illustrative assumptions, "
-                        "not measured financial losses."
+                        "Cost assumptions: missed fraud = 100% of transaction "
+                        "amount; false alarm = 500 units per transaction. "
+                        "These are illustrative PaySim monetary units, not EGP."
                     )
 
         except Exception as e:
