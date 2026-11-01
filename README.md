@@ -338,6 +338,21 @@ Allows users to upload multiple transactions and receive predictions for each tr
 
 Displays model evaluation metrics, a confusion matrix, and an estimated business cost calculation using labelled transactions.
 
+
+### Application Screenshots
+
+#### Home Page
+![Home Page](home.png)
+
+#### Single Transaction Prediction
+![Single Transaction](single_transaction.png)
+
+#### CSV Upload and Predictions
+![CSV Upload](csv_upload.png)
+
+#### Fraud Detection Dashboard
+![Fraud Dashboard](fraud_dashboard.png)
+
 ### Live Application
 
 https://mobile-wallet-fraud-detection.streamlit.app/
