@@ -229,14 +229,33 @@ Only the six model input fields are required for prediction. `isFraud` is requir
 
 ### Application screenshots
 
-#### Overview
-![SmartPay Overview](overview.png)
+### Overview
 
+<table>
+  <tr>
+    <td width="50%">
+      <img src="screenshots/overview.png" width="100%">
+    </td>
+    <td width="50%">
+      <img src="screenshots/overview2.png" width="100%">
+    </td>
+  </tr>
+</table>
 #### Single transaction screening
 ![SmartPay Single Transaction](single_transaction.png)
 
-#### Batch analysis
-![SmartPay Batch Analysis](batch_analysis.png)
+### Batch Analysis
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="screenshots/batch_analysis.png" width="100%">
+    </td>
+    <td width="50%">
+      <img src="screenshots/batch_analysis2.png" width="100%">
+    </td>
+  </tr>
+</table>
 
 #### Model performance
 ![SmartPay Model Performance](Model_performance.png)
