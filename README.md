@@ -321,10 +321,3 @@ Open the local URL displayed in the terminal.
 - PaySim Mobile Money Simulation dataset, Kaggle: https://www.kaggle.com/datasets/ealaxi/paysim1
 - NextGen Institute, *Machine Learning — Final Project Ideas*, Project 06: Mobile-Wallet Fraud Detection (course brief supplied for this project).
 
-## Project deliverables
-
-- Jupyter notebook: `Mobile_Wallet_Fraud_Detection.ipynb` (included in the GitHub repository).
-- Saved model: `fraud_pipeline.joblib`.
-- Custom feature module: `fraud_features.py`.
-- Deployed Streamlit application: https://mobile-wallet-fraud-detection.streamlit.app/.
-- Source repository: https://github.com/Shahd-Salah/Mobile-Wallet-Fraud-Detection.
