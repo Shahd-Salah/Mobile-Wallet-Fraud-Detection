@@ -227,33 +227,34 @@ Additional dataset, methodology, cost-assumption, and responsible-use informatio
 Only the six model input fields are required for prediction. `isFraud` is required only for labelled evaluation. The 20-row CSV created during app testing was used to check the interface and batch-prediction workflow; it is not the source of the final test metrics reported above.
 
 
+
 ## Application Screenshots
 
-### Overview
+### 1. Overview Dashboard
 
-<table>
-<tr>
-<td width="50%">
-<img src="./home.png" width="100%" alt="SmartPay Home">
-</td>
-<td width="50%">
-<img src="./fraud_dashboard.png" width="100%" alt="SmartPay Dashboard">
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="./overview.png" width="49%" alt="SmartPay Overview"/>
+  <img src="./overview2.png" width="49%" alt="SmartPay Overview Analytics"/>
+</p>
 
-### Transaction and Batch Analysis
+### 2. Single Transaction Analysis
 
-<table>
-<tr>
-<td width="50%">
-<img src="./single_transaction.png" width="100%" alt="Single Transaction">
-</td>
-<td width="50%">
-<img src="./csv_upload.png" width="100%" alt="CSV Upload">
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="./single_transaction.png" width="85%" alt="Single Transaction Fraud Prediction"/>
+</p>
+
+### 3. Batch Analysis
+
+<p align="center">
+  <img src="./batch_analysis.png" width="49%" alt="Batch Analysis Dashboard"/>
+  <img src="./batch_analysis2.png" width="49%" alt="Batch Transaction Results"/>
+</p>
+
+### 4. Model Performance
+
+<p align="center">
+  <img src="./model_performance.png" width="85%" alt="SmartPay Model Performance"/>
+</p>
 
 
 ## 11. Repository structure
