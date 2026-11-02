@@ -5,7 +5,6 @@ SmartPay is a mobile-wallet fraud detection system built as an end-to-end machin
 **Live application:** https://mobile-wallet-fraud-detection.streamlit.app/  
 **GitHub repository:** https://github.com/Shahd-Salah/Mobile-Wallet-Fraud-Detection
 
-> **Important context:** The project uses the simulated PaySim mobile-money dataset, not live customer transactions. The model is an academic decision-support prototype. A flagged transaction is not confirmed fraud and should be reviewed by a human analyst.
 
 ## Project at a glance
 
